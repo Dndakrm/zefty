@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zefty ID — Staff</title>
+
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {50:'#eef8ff',100:'#d9efff',200:'#b8e0ff',300:'#8eccff',400:'#5ab2ff',500:'#2e97ff',600:'#1e77db',700:'#185fb0',800:'#154f90',900:'#143e70'},
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body { background:#0b142d; color:#fff; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial; }
+    .brand { font-family:'Montserrat', Inter, system-ui; font-weight:800; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.06); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.12); }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0A1A3A]/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+      <a href="index.html#home" class="flex items-center gap-3 group" title="Zefty ID — Home">
+        <!-- Swap this logo src if you have a local one -->
+        <img src="https://i.imgur.com/dxE77jS.png" alt="Zefty ID" class="w-9 h-9 rounded-full ring-1 ring-white/20" />
+        <span class="text-xl brand tracking-tight">ZeFty ID</span>
+      </a>
+
+      <nav class="ml-6 hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html#home" class="hover:text-primary-300">Home</a>
+        <a href="about.html" class="hover:text-primary-300">About</a>
+        <a href="staff.html" class="text-primary-300">Staff</a>
+        <a href="index.html#contact" class="hover:text-primary-300">Contact</a>
+        <div class="relative group">
+          <a href="index.html#topup" class="hover:text-primary-300">Shop</a>
+          <!-- (kept simple here; dropdown lives on main page) -->
+        </div>
+      </nav>
+
+      <button class="md:hidden p-2 rounded-lg glass border border-white/10 ml-auto" id="mobileMenuBtn" aria-label="Open Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 p-3 space-y-2">
+      <a href="index.html#home" class="block px-3 py-2 rounded-lg hover:bg-white/5">Home</a>
+      <a href="about.html" class="block px-3 py-2 rounded-lg hover:bg-white/5">About</a>
+      <a href="staff.html" class="block px-3 py-2 rounded-lg hover:bg-white/5">Staff</a>
+      <a href="index.html#contact" class="block px-3 py-2 rounded-lg hover:bg-white/5">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div aria-hidden class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(120,160,235,0.20),_rgba(13,33,77,0.95)_60%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 pt-14 pb-10">
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-center brand">Tim Zefty ID</h1>
+    </div>
+  </section>
+
+  <!-- STAFF GRID -->
+  <main class="max-w-7xl mx-auto px-4 pb-20">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+      <!-- Andi Akram -->
+      <article class="glass rounded-2xl border border-white/10 p-6 shadow-soft h-full flex flex-col">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center text-2xl font-bold">A</div>
+          <div>
+            <h3 class="text-xl font-bold">Andi Akram</h3>
+            <p class="text-sm opacity-80">CEO • Founder • Developer</p>
+          </div>
+        </div>
+        <p class="mt-4 opacity-90 text-sm flex-1">
+          Memimpin strategi produk & kemitraan. Fokus pada performa web, keamanan transaksi, dan pengalaman pengguna.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Leadership</span>
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Product</span>
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Engineering</span>
+        </div>
+        <div class="mt-5 flex items-center gap-4 text-sm">
+          <a href="https://wa.me/6283133752728" target="_blank" class="hover:text-primary-300">WhatsApp</a>
+          <a href="mailto:dndakram@gmail.com" class="hover:text-primary-300">Email</a>
+        </div>
+      </article>
+
+      <!-- Fristo -->
+      <article class="glass rounded-2xl border border-white/10 p-6 shadow-soft h-full flex flex-col">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-700 flex items-center justify-center text-2xl font-bold">F</div>
+          <div>
+            <h3 class="text-xl font-bold">Fristo</h3>
+            <p class="text-sm opacity-80">Co-Founder</p>
+          </div>
+        </div>
+        <p class="mt-4 opacity-90 text-sm flex-1">
+          Mengembangkan komunitas & operasional, memastikan kualitas layanan dan integritas marketplace.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Community</span>
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Operations</span>
+        </div>
+      </article>
+
+      <!-- Ahmad -->
+      <article class="glass rounded-2xl border border-white/10 p-6 shadow-soft h-full flex flex-col">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-900 flex items-center justify-center text-2xl font-bold">A</div>
+          <div>
+            <h3 class="text-xl font-bold">Ahmad</h3>
+            <p class="text-sm opacity-80">Investor</p>
+          </div>
+        </div>
+        <p class="mt-4 opacity-90 text-sm flex-1">
+          Mendukung skala produk & infrastruktur untuk memastikan stabilitas dan pertumbuhan Zefty ID.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Finance</span>
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Growth</span>
+        </div>
+      </article>
+
+      <!-- Arifin Z -->
+      <article class="glass rounded-2xl border border-white/10 p-6 shadow-soft h-full flex flex-col">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-300 to-blue-800 flex items-center justify-center text-2xl font-bold">A</div>
+          <div>
+            <h3 class="text-xl font-bold">Arifin Z</h3>
+            <p class="text-sm opacity-80">Investor</p>
+          </div>
+        </div>
+        <p class="mt-4 opacity-90 text-sm flex-1">
+          Memberikan dukungan pendanaan & arahan strategis untuk ekspansi layanan dan kemitraan.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Investment</span>
+          <span class="px-2.5 py-1 rounded-full glass border border-white/10">Strategy</span>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-[#081530]">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm">
+      <div class="opacity-80">© <span id="year"></span> Zefty ID. All rights reserved.</div>
+      <nav class="flex-1 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
+        <a href="index.html#contact" class="hover:text-primary-300">Contact</a>
+        <a href="support.html" class="hover:text-primary-300">Support</a>
+        <a href="about.html" class="hover:text-primary-300">About Us</a>
+        <a href="tos.html" class="hover:text-primary-300">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-primary-300">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

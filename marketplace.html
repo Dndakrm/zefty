@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zefty ID — Marketplace</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {50:'#eef8ff',100:'#d9efff',200:'#b8e0ff',300:'#8eccff',400:'#5ab2ff',500:'#2e97ff',600:'#1e77db',700:'#185fb0',800:'#154f90',900:'#143e70'},
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body { background:#0b142d; color:#fff; font-family: Inter, sans-serif; }
+    .brand { font-family:'Montserrat', sans-serif; font-weight:800; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.06); }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0A1A3A]/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+      <a href="index.html#home" class="flex items-center gap-3 group">
+        <img src="https://i.imgur.com/dxE77jS.png" alt="Zefty ID" class="w-9 h-9 rounded-full ring-1 ring-white/20" />
+        <span class="text-xl brand tracking-tight">ZeFty ID</span>
+      </a>
+      <nav class="ml-6 hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html#home" class="hover:text-primary-300">Home</a>
+        <a href="about.html" class="hover:text-primary-300">About</a>
+        <a href="staff.html" class="hover:text-primary-300">Staff</a>
+        <a href="index.html#contact" class="hover:text-primary-300">Contact</a>
+        <a href="marketplace.html" class="text-primary-300">Marketplace</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div aria-hidden class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(120,160,235,0.20),_rgba(13,33,77,0.95)_60%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 pt-16 pb-10 text-center">
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight brand">Marketplace</h1>
+      <p class="mt-4 text-lg opacity-90">Join our Discord for more information</p>
+    </div>
+  </section>
+
+  <!-- DISCORD WIDGET -->
+  <main class="max-w-3xl mx-auto px-4 pb-20 text-center">
+    <iframe src="https://discord.com/widget?id=1244607375126564957&theme=dark"
+      width="100%" height="500" allowtransparency="true" frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      class="rounded-xl border border-white/10 shadow-soft"></iframe>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-[#081530]">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm">
+      <div class="opacity-80">© <span id="year"></span> Zefty ID. All rights reserved.</div>
+      <nav class="flex-1 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
+        <a href="index.html#contact" class="hover:text-primary-300">Contact</a>
+        <a href="support.html" class="hover:text-primary-300">Support</a>
+        <a href="about.html" class="hover:text-primary-300">About Us</a>
+        <a href="tos.html" class="hover:text-primary-300">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-primary-300">Privacy Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
