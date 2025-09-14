@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zefty ID — Game Topup & Marketplace</title>
+  <meta name="description" content="Zefty ID: Topup game & marketplace akun. Aman, cepat, harga bersahabat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50:'#eef8ff',100:'#d9efff',200:'#b8e0ff',300:'#8eccff',400:'#5ab2ff',500:'#2e97ff',600:'#1e77db',700:'#185fb0',800:'#154f90',900:'#143e70'
+            },
+            dark:'#0b0f1a'
+          },
+          boxShadow:{ soft:'0 10px 30px rgba(0,0,0,.12)'}
+        }
+      }
+    }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .brand { font-family: 'Montserrat', Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial; font-weight: 800; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.06); }
+  </style>
+</head>
+<body class="bg-[#0b142d] text-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#0A1A3A]/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
+      <a href="index.html" class="flex items-center gap-3 group" title="Zefty ID — Home">
+        <img src="https://i.imgur.com/dxE77jS.png" alt="Zefty ID Logo" class="w-9 h-9 rounded-full ring-1 ring-white/20"/>
+        <span class="text-xl brand tracking-tight">ZeFty ID</span>
+      </a>
+      <nav class="ml-6 hidden md:flex items-center gap-6 text-sm">
+        <a href="index.html" class="hover:text-primary-300">Home</a>
+        <div class="relative group">
+          <button id="shopBtn" class="hover:text-primary-300 inline-flex items-center gap-2">Shop <svg width="14" height="14" viewBox="0 0 24 24" class="opacity-80"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg></button>
+          <div id="shopMenu" class="hidden absolute left-0 mt-2 w-64 glass rounded-xl border border-white/10 shadow-soft p-2">
+            <a href="#topup" class="block px-3 py-2 rounded-lg hover:bg-white/5">Topup</a>
+            <a href="marketplace.html" class="block px-3 py-2 rounded-lg hover:bg-white/5">Game Account Marketplace</a>
+          </div>
+      
+      </nav>
+      <div class="ml-auto flex items-center gap-3">
+        <!-- Currency -->
+        <div class="relative">
+          <button id="currencyBtn" class="px-3 py-2 text-sm rounded-lg glass border border-white/10">IDR</button>
+          <div id="currencyMenu" class="hidden absolute right-0 mt-2 w-28 glass rounded-xl border border-white/10 shadow-soft p-1 text-sm">
+            <button data-currency="IDR" class="w-full text-left px-3 py-2 rounded-lg hover:bg-white/5">IDR</button>
+            <button data-currency="MYR" class="w-full text-left px-3 py-2 rounded-lg hover:bg-white/5">MYR</button>
+            <button data-currency="PHP" class="w-full text-left px-3 py-2 rounded-lg hover:bg-white/5">PHP</button>
+          </div>
+        </div>
+
+        <!-- Login Button -->
+        <a href="login.html" class="px-3 py-2 text-sm rounded-lg glass border border-white/10 hover:bg-white/5">Login</a>
+       </div>
+        <button class="md:hidden p-2 rounded-lg glass border border-white/10" id="mobileMenuBtn" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 p-3 space-y-2">
+      <a href="#home" class="block px-3 py-2 rounded-lg hover:bg-white/5">Home</a>
+      <details class="px-3 py-2 rounded-lg hover:bg-white/5">
+        <summary class="cursor-pointer">Shop</summary>
+        <div class="pl-3 mt-2 space-y-2">
+          <a href="#topup" class="block px-3 py-2 rounded-lg hover:bg-white/5">Topup</a>
+          <a href="#marketplace" class="block px-3 py-2 rounded-lg hover:bg-white/5">Game Account Marketplace</a>
+        </div>
+      </details>
+      <a href="#menu" class="block px-3 py-2 rounded-lg hover:bg-white/5">Menu</a>
+    </div>
+  </header>
+
+  <!-- HERO / CAROUSEL -->
+  <section id="home" class="relative overflow-hidden">
+    <!-- color scheme background (radial glow) -->
+    <div aria-hidden class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(120,160,235,0.25),_rgba(13,33,77,0.95)_60%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 py-20 md:py-28">
+      <div class="mx-auto text-center max-w-4xl">
+        <span class="inline-block text-xs md:text-sm px-3 py-1 rounded-full glass border border-white/10">Welcome to Zefty ID</span>
+        
+        <p class="mt-4 text-base md:text-lg opacity-80">Topup Free Fire, Roblox, PUBG, MLBB, Genshin Impact & banyak lagi — aman, cepat, harga bersahabat.</p>
+      </div>
+
+      <!-- Centered Carousel -->
+      <div class="mt-10 md:mt-12">
+        <div class="relative max-w-4xl mx-auto rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-soft">
+          <div id="carousel" class="relative aspect-[16/9] bg-black/20"></div>
+          <!-- Dots -->
+          <div id="dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"></div>
+        </div>
+        <div class="mt-8 flex items-center justify-center gap-4">
+          <a href="#games" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 transition shadow-soft">
+            Browse Our Games
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l1.41 1.41L8.83 10H20v2H8.83l4.58 4.59L12 18l-8-8z"/></svg>
+          </a>
+          <a href="#features" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl glass border border-white/10">Explore Features</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder sections -->
+  <section id="topup" class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">Topup</h2>
+    <p class="opacity-80 mt-2">Pilih game favoritmu dan topup dalam hitungan detik.</p>
+  </section>
+
+  <section id="marketplace" class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold">Game Account Marketplace</h2>
+    <p class="opacity-80 mt-2">Beli/jual akun dengan aman melalui escrow Zefty ID.</p>
+  </section>
+
+  <!-- FOOTER BAR -->
+  <footer class="mt-8 border-t border-white/10 bg-[#081530]">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm">
+      <div class="opacity-80">© <span id="year"></span> Zefty ID. All rights reserved.</div>
+      <nav class="flex-1 flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
+        <a href="contact.html" class="hover:text-primary-300">Contact</a>
+        <a href="#support" class="hover:text-primary-300">Support</a>
+        <a href="about.html" class="hover:text-primary-300">About Us</a>
+        <a href="tos.html" class="hover:text-primary-300">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-primary-300">Privacy Policy</a>
+        <a href="staff.html" class="hover:text-primary-300">Staff</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // ----- simple dropdowns -----
+    const shopBtn = document.getElementById('shopBtn');
+    const shopMenu = document.getElementById('shopMenu');
+    const currencyBtn = document.getElementById('currencyBtn');
+    const currencyMenu = document.getElementById('currencyMenu');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    function toggle(el){ el.classList.toggle('hidden'); }
+    function closeOutside(e, el, btn){ if(!el.contains(e.target) && !btn.contains(e.target)) el.classList.add('hidden'); }
+
+    shopBtn.addEventListener('click', () => toggle(shopMenu));
+    currencyBtn.addEventListener('click', () => toggle(currencyMenu));
+    mobileMenuBtn.addEventListener('click', () => toggle(mobileMenu));
+
+    document.addEventListener('click', (e)=>{
+      closeOutside(e, shopMenu, shopBtn);
+      closeOutside(e, currencyMenu, currencyBtn);
+    });
+
+    // currency choose
+    currencyMenu.querySelectorAll('[data-currency]').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        currencyBtn.textContent = b.dataset.currency;
+        currencyMenu.classList.add('hidden');
+        // TODO: Hook to pricing logic
+      });
+    });
+
+    // ----- HERO CAROUSEL -----
+    const slides = [
+      { url: 'https://cdn.wallpapersafari.com/44/47/FE3gOw.jpg', alt: 'PUBG battleground' },
+      { url: 'https://images6.alphacoders.com/132/1328090.jpeg', alt: 'MLBB heroes' },
+      { url: 'https://cdn.wallpapersafari.com/80/27/BJ78Du.jpg', alt: 'Genshin Impact scenery' },
+      { url: 'https://images.hdqwalls.com/wallpapers/delta-force-2025-7m.jpg', alt: 'Delta Force 2025' }
+    ];
+
+    const carousel = document.getElementById('carousel');
+    const dots = document.getElementById('dots');
+
+    let idx = 0; let timer;
+
+    function render(){
+      const s = slides[idx];
+      carousel.innerHTML = `
+        <img src="${s.url}" alt="${s.alt}" class="absolute inset-0 w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0b142d]/60 via-transparent to-[#0b142d]/40"></div>
+      `;
+      dots.innerHTML = slides.map((_,i)=>`<button aria-label="Slide ${i+1}" class="w-2.5 h-2.5 rounded-full ${i===idx?'bg-white':'bg-white/40'}"></button>`).join('');
+      dots.querySelectorAll('button').forEach((b,i)=> b.addEventListener('click', ()=>{ idx=i; restart(); }));
+    }
+
+    function next(){ idx = (idx+1)%slides.length; render(); }
+    function restart(){ clearInterval(timer); render(); timer = setInterval(next, 4000); }
+
+    render(); timer = setInterval(next, 4000);
+
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
